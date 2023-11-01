@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Intro() {
+export default function Home() {
   const images = ["intro1.jpg", "intro2.jpg", "intro3.jpg", "intro4.jpg", "intro5.jpg"];
   const texts = ["Text for Image 1", "Text for Image 2", "Text for Image 3", "Text for Image 4", "Text for Image 5"];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,14 +18,14 @@ export default function Intro() {
   return (
     <div className="container">
       <button className='header--intro--button--left' onClick={previousImage}>
-        <span class="material-symbols-outlined">arrow_circle_left</span>
+        <span className="material-symbols-outlined right--arrow">arrow_circle_left</span>
       </button>
       <div className="image-container">
         <img className="carousel-image" src={images[currentIndex]} />
         <div className="text-overlay">{texts[currentIndex]}</div>
       </div>
       <button className='header--intro--button--right' onClick={nextImage}>
-        <span class="material-symbols-outlined">arrow_circle_right</span>
+        <span className="material-symbols-outlined left--arrow">arrow_circle_right</span>
       </button>
     </div>
   );
