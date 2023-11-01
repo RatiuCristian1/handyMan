@@ -17,12 +17,16 @@ export default function Intro() {
 
   return (
     <div className="container">
-      <button onClick={previousImage}>Previous</button>
+      <button className='header--intro--button--left' onClick={previousImage}>
+        <span class="material-symbols-outlined">arrow_circle_left</span>
+      </button>
       <div className="image-container">
         <img className="carousel-image" src={images[currentIndex]} />
         <div className="text-overlay">{texts[currentIndex]}</div>
       </div>
-      <button onClick={nextImage}>Next</button>
+      <button className='header--intro--button--right' onClick={nextImage}>
+        <span class="material-symbols-outlined">arrow_circle_right</span>
+      </button>
     </div>
   );
 }
