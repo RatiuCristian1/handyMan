@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function Intro() {
-  const images = ["coca-cola.jpg", "fanta.jpg", "bottle-of-sprite.jpg"];
+  const images = ["intro1.jpg", "intro2.jpg", "intro3.jpg", "intro4.jpg", "intro5.jpg"];
+  const texts = ["Text for Image 1", "Text for Image 2", "Text for Image 3", "Text for Image 4", "Text for Image 5"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -17,7 +18,10 @@ export default function Intro() {
   return (
     <div className="container">
       <button onClick={previousImage}>Previous</button>
-      <img className="carusel--image" src={images[currentIndex]} />
+      <div className="image-container">
+        <img className="carousel-image" src={images[currentIndex]} />
+        <div className="text-overlay">{texts[currentIndex]}</div>
+      </div>
       <button onClick={nextImage}>Next</button>
     </div>
   );
