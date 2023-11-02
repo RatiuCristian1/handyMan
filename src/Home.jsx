@@ -16,17 +16,22 @@ export default function Home() {
   };
 
   return (
-    <div className="container">
-      <button className='header--intro--button--left' onClick={previousImage}>
-        <span className="material-symbols-outlined right--arrow">arrow_circle_left</span>
-      </button>
-      <div className="image-container">
-        <img className="carousel-image" src={images[currentIndex]} />
-        <div className="text-overlay">{texts[currentIndex]}</div>
+    <>
+      <div className="container">
+        <button className='header--intro--button--left' onClick={previousImage}>
+          <span className="material-symbols-outlined right--arrow">arrow_circle_left</span>
+        </button>
+        <div className="image-container">
+          <img className="carousel-image" src={images[currentIndex]} />
+          <div className="text-overlay">{texts[currentIndex]}</div>
+        </div>
+        <button className='header--intro--button--right' onClick={nextImage}>
+          <span className="material-symbols-outlined left--arrow">arrow_circle_right</span>
+        </button>
       </div>
-      <button className='header--intro--button--right' onClick={nextImage}>
-        <span className="material-symbols-outlined left--arrow">arrow_circle_right</span>
-      </button>
-    </div>
+      <div>
+        
+      </div>
+    </>
   );
 }
