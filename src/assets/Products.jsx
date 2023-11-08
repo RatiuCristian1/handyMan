@@ -1,42 +1,37 @@
-import React from "react";
-import {getVan} from "./api"
+import React, { useState, useEffect } from "react";
+import { getVans } from "./api";
 
 export default function Products() {
-    const [vans, setVans] = React.useState([])
-  const [loading, setLoading] = React.useState(false)
-  const [error, setError] = React.useState(null)
+  const [vans, setVans] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     async function loadVans() {
-        setLoading(true)
-        try {
-            const data = await getVans()
-            setVans(data)
-        } catch (err) {
-            setError(err)
-        } finally {
-            setLoading(false)
-        }
+      setLoading(true);
+      try {
+        const data = await getVans();
+        setVans(data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
     }
 
-    loadVans()
-}, [])
+    loadVans();
+  }, []);
 
-
-const vanElements = vans.map(van => (
-  <div key={van.id} className="van-tile">
-      
-          <img src={van.imageUrl} />
+  return (
+    <div className="van-list">
+      {vans.map((van) => (
+        <div key={van.id} className="van-tile">
+          <img src={van.imageUrl} alt={van.name} />
           <div className="van-info">
-              <h3>{van.name}</h3>
-
+            <h3>{van.name}</h3>
           </div>
-  </div>
-))
-
- return (
-  <div className="van-list">
-      {vanElements}
-  </div>
- )
+        </div>
+      ))}
+    </div>
+  );
 }
