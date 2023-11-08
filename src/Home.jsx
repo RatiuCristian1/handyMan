@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Products from './assets/Products';
 
 export default function Home() {
   const images = ["intro1.jpg", "intro2.jpg", "intro3.jpg", "intro4.jpg", "intro5.jpg"];
@@ -30,7 +31,7 @@ export default function Home() {
         </button>
       </div>
       <div>
-        
+        { <Products /> }
       </div>
     </>
   );
