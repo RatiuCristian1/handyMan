@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { getVans } from "./api";
+import { getProducts } from "./api";
 
 export default function Products() {
-  const [vans, setVans] = useState([]);
+  const [productsEl, setProductsEl] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function loadVans() {
+    async function loadProductsEl() {
       setLoading(true);
       try {
-        const data = await getVans();
-        setVans(data);
+        const data = await getProducts();
+        setProductsEl(data);
       } catch (err) {
         setError(err);
       } finally {
@@ -19,16 +19,16 @@ export default function Products() {
       }
     }
 
-    loadVans();
+    loadProductsEl();
   }, []);
 
   return (
-    <div className="van-list">
-      {vans.map((van) => (
-        <div key={van.id} className="van-tile">
-          <img src={van.imageUrl} alt={van.name} />
-          <div className="van-info">
-            <h3>{van.name}</h3>
+    <div className="products--list">
+      {productsEl.map((product) => (
+        <div key={product.id} className="products--tile">
+          <img src={product.imageUrl} alt={product.name} />
+          <div className="products--info">
+            <h3>{product.name}</h3>
           </div>
         </div>
       ))}

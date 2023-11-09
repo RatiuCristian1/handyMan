@@ -12,6 +12,7 @@ export default function Header() {
         </Link>
             <nav className="navigation--el">
                 <Link className="header--home" to="/">Home</Link>
+                <Link className="header--home" to="/products">Products</Link>
                 <Link to="/login"><span className="material-symbols-outlined header--logo">account_circle</span></Link>
             </nav>
         </header>

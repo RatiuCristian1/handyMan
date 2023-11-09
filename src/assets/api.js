@@ -18,13 +18,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
-const vansCollectionRef = collection(db, "products")
+const productsCollectionRef = collection(db, "products")
 const storage = getStorage(app);
 
-export async function getVans() {
+export async function getProducts() {
   try {
-    const snapshot = await getDocs(vansCollectionRef);
-    const vans = snapshot.docs.map(async (doc) => {
+    const snapshot = await getDocs(productsCollectionRef);
+    const products = snapshot.docs.map(async (doc) => {
       const data = doc.data();
       const imageUrl = data.imagePath; // Use the GCS URL
 
@@ -39,12 +39,12 @@ export async function getVans() {
       };
     });
 
-    const resolvedVans = await Promise.all(vans);
-    console.log("Vans Data:", resolvedVans);
+    const resolvedProducts = await Promise.all(products);
+    console.log("Products Data:", resolvedProducts);
 
-    return resolvedVans;
+    return resolvedProducts;
   } catch (error) {
-    console.error("Error fetching vans:", error);
+    console.error("Error fetching products:", error);
     throw error;
   }
 }
