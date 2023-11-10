@@ -11,7 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #FBFAF0;
+  background-color: #fafafa;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -99,20 +99,22 @@
 
 .home--products--container {
   width: 75%;
-  margin: 4em auto 0em;
-  box-shadow: 0 0 2px black;
+  margin: 2em auto 0em;
+  box-shadow: 0 0 2px rgb(112, 111, 111);
+  background-color: #c7c6c6;
 
 }
 
 .home--products--images {
-  max-width: 250px;
+  max-width: 213px;
   flex: 1;
   box-shadow: 0 0 10px rgb(163, 153, 153);
   border-radius: 5px;
 }
 
 .home--angel--grinder--container,
-.home--power--drill--container {
+.home--power--drill--container,
+.home--cordless--drill--container {
   display: flex;
   justify-content: center;
   gap: 3em;
@@ -123,6 +125,20 @@
   color: #333;
   text-align: center;
   margin: 0.75em 0 0.4em;
+}
+
+.home--banner {
+  position: absolute;
+  top: 950px;
+  left: 300px;
+}
+
+.backgroung--home--banner {
+  background-image: url('bannerBack1.jpg');
+  background-position: center;
+  width: 100%;
+  height: 60px;
+  margin-top: 5px;
 }
 
 

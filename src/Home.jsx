@@ -30,8 +30,13 @@ export default function Home() {
           <span className="material-symbols-outlined left--arrow">arrow_circle_right</span>
         </button>
       </div>
+
+      <div className='backgroung--home--banner'></div>
+      
       <div className='home--products--container'>
+
         <div className='home--angel--grinder--container'>
+
           <div>
             <p className='home--products--name'>Bosch AG50-10125 Angle Grinder</p>
             <img className='home--products--images' src="Bosch AG50-10125 Angle Grinder.webp" alt="" />
@@ -65,6 +70,28 @@ export default function Home() {
           </div>
           
         </div>
+
+        <div className='home--cordless--drill--container'>
+          <div>
+            <p className='home--products--name'>Bosch-cordless18</p>
+            <img className='home--products--images' src="Bosch-cordless18.webp" alt="" />
+          </div>
+
+          <div>
+            <p className='home--products--name'>DeWalt-cordless20</p>
+            <img className='home--products--images' src="DeWalt-cordless20.webp" alt="" />
+          </div>
+
+          <div>
+            <p className='home--products--name'>Makita-cordless18 Pack</p>
+            <img className='home--products--images' src="i_013c3c259c058f87174967811c3a56ea-w-800h-800f-1c-ffffffo-q-80.jpg" alt="" />
+          </div>
+          
+        </div>
+
+      </div>
+      <div className='home--banner'>
+        <img src="construction111.jpg" alt="" />
       </div>
     </>
   );
