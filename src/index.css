@@ -52,7 +52,7 @@
   top: 40%; /* Adjust to center vertically */
   left: 50%; /* Adjust to center horizontally */
   transform: translate(-50%, -50%);
-  background-color: rgba(121, 3, 3, 0.5);
+  background-color: transparent;
   border-radius: 5px;
   font-size: 2rem;
   color: #fff;
@@ -98,10 +98,11 @@
 }
 
 .home--products--container {
-  width: 75%;
+  width: 65%;
   margin: 2em auto 0em;
   box-shadow: 0 0 2px rgb(112, 111, 111);
   background-color: #c7c6c6;
+  padding: 0 0 0 175px;
 
 }
 
@@ -110,27 +111,31 @@
   flex: 1;
   box-shadow: 0 0 10px rgb(163, 153, 153);
   border-radius: 5px;
+  margin: 0.5em 0 1em 0;
 }
 
 .home--angel--grinder--container,
 .home--power--drill--container,
-.home--cordless--drill--container {
+.home--cordless--drill--container,
+.home--hand--tools--container {
   display: flex;
   justify-content: center;
   gap: 3em;
   margin: 1em;
 }
 
+.home--angel--grinder--container {
+  padding-top: 1.7em;
+}
+
+.home--hand--tools--container {
+  padding-bottom: 2em;
+}
+
 .home--products--name {
   color: #333;
   text-align: center;
-  margin: 0.75em 0 0.4em;
-}
-
-.home--banner {
-  position: absolute;
-  top: 950px;
-  left: 300px;
+  font-size: 1rem;
 }
 
 .backgroung--home--banner {
@@ -139,6 +144,34 @@
   width: 100%;
   height: 60px;
   margin-top: 5px;
+}
+
+.home--banner {
+  position: absolute;
+  top: 968px;
+  left: 400px;
+}
+
+.home--banner2 {
+  position: absolute;
+  left: 0px;
+  top: 564px;
+}
+
+.wrench--banner {
+  position: absolute;
+  background-image: url('tool-31.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70%;
+  left: 422px;
+  height: 950px;
+  color: black;
+  transform: rotate(150deg);
+  z-index: -1;
+  top: 900px;
+  /* border: 1px solid red; */
 }
 
 
