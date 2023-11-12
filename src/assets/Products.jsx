@@ -26,7 +26,7 @@ export default function Products() {
     <div className="products--list">
       {productsEl.map((product) => (
         <div key={product.id} className="products--tile">
-          <img src={product.imageUrl} alt={product.name} />
+          <img className="the--products--images" src={product.imageUrl} alt={product.name} />
           <div className="products--info">
             <h3>{product.name}</h3>
           </div>

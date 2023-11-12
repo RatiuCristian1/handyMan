@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Products from './assets/Products';
 
 export default function Home() {
-  const images = ["intro1.jpg", "introC.webp", "intro3.jpg", "intro4.jpg", "intro5.jpg"];
+  const images = ["intro1.jpg", "introC.jpg", "intro3.jpg", "intro5.jpg"];
   const texts = ["Get your best power tools at HandyMan.com",];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -102,7 +102,7 @@ export default function Home() {
 
           <div>
             <p className='home--products--name'>Makita-cordless18 Pack</p>
-            <img className='home--products--images' src="public\pliers-stanley.jpg" alt="" />
+            <img className='home--products--images' src="pliers-stanley.jpg" alt="" />
           </div>
           
         </div>
