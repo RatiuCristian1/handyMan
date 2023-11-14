@@ -23,15 +23,20 @@ export default function Products() {
   }, []);
 
   return (
-    <div className="products--list">
-      {productsEl.map((product) => (
-        <div key={product.id} className="products--tile">
-          <img className="the--products--images" src={product.imageUrl} alt={product.name} />
-          <div className="products--info">
-            <h3>{product.name}</h3>
+    <div>
+      <div className="products--banner--container">
+        <img className="products--banner--image" src="banner3.png" alt="" />
+      </div>
+      <div className="products--list">
+        {productsEl.map((product) => (
+          <div key={product.id} className="products--tile">
+            <img className="the--products--images" src={product.imageUrl} alt={product.name} />
+            <div className="products--info">
+              <h3>{product.name}</h3>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
