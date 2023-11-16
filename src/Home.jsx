@@ -115,6 +115,11 @@ export default function Home() {
         {/* <img className='' src="construction1.jpg" alt="" /> */}
       </div>
       <div className='wrench--banner'></div>
+      <div className='deal--banner--container'>
+        <img className='deal--banner' src="deal--banner.png" alt="" />
+        <img className='deal--plumer' src="plumer.webp" alt="" />
+        <img className='deal--banner1' src="deal--banner1.jpg" alt="" />
+      </div>
     </>
   );
 }

@@ -140,7 +140,7 @@
   display: flex;
   justify-content: center;
   gap: 3em;
-  margin: 1em;
+  margin: 0.85em;
 }
 
 .home--angel--grinder--container {
@@ -167,7 +167,7 @@
 
 .home--banner {
   position: absolute;
-  top: 968px;
+  top: 912px;
   left: 400px;
 }
 
@@ -191,6 +191,28 @@
   z-index: -1;
   top: 1200px;
   /* border: 1px solid red; */
+}
+
+.deal--banner {
+  width: 40%;
+  height: auto;
+}
+
+.deal--banner--container {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  margin-top: 1.5em;
+}
+
+.caravan-detail-image-container{
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  background-color: blue;
 }
 
 

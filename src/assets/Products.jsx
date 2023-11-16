@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getProducts } from "./api";
+import { Link } from 'react-router-dom'
 
 export default function Products() {
   const [productsEl, setProductsEl] = useState([]);
@@ -29,12 +30,14 @@ export default function Products() {
       </div>
       <div className="products--list">
         {productsEl.map((product) => (
-          <div key={product.id} className="products--tile">
-            <img className="the--products--images" src={product.imageUrl} alt={product.name} />
-            <div className="products--info">
-              <h3>{product.name}</h3>
+          <Link key={product.id} to={product.id} className="product--link">
+            <div key={product.id} className="products--tile">
+              <img className="the--products--images" src={product.imageUrl} alt={product.name} />
+              <div className="products--info">
+                <h3>{product.name}</h3>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
