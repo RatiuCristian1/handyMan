@@ -215,6 +215,47 @@
   background-color: blue;
 }
 
+.modal--overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--content {
+  background: #fff;
+  padding: 35px 55px 80px 35px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+}
+
+.modal--close {
+  position: absolute;
+  width: 35px;
+  text-align: center;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  font-size: 2rem;
+  align-self: center;
+  line-height: 1.8;
+}
+
+.modal--info {
+  text-align: left;
+  color: #333;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+}
+
 
 
 /* Add styles to your footer as needed */

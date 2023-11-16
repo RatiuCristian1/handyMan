@@ -6,6 +6,7 @@ import Layout from './Layout'
 import Home from './Home'
 import Products from './assets/Products'
 import ProductDetail from './assets/ProductDetail'
+import ProductModal from './assets/ProductModal'
 
 
 
