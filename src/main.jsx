@@ -5,8 +5,6 @@ import './index.css'
 import Layout from './Layout'
 import Home from './Home'
 import Products from './assets/Products'
-import ProductDetail from './assets/ProductDetail'
-import ProductModal from './assets/ProductModal'
 
 
 
@@ -18,7 +16,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
+            {/* <Route path="/products/:id" element={<ProductDetail />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
