@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 
 
-export default function Layout() {
+export default function Layout({ openCartModal, cartItemsCount }) {
   return (
     <div className="layout-container">
-      <Header />
+      <Header openCartModal={openCartModal} cartItemsCount={cartItemsCount} />
       <div className="content-container">
         <Outlet />
       </div>
