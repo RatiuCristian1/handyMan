@@ -39,21 +39,21 @@ export default function Home() {
       <div className='home--products--container'>
 
         <div className='home--angel--grinder--container'>
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Bosch AG50 Angle Grinder</p>
               <img className='home--products--images' src="Bosch AG50-10125 Angle Grinder.webp" alt="" />
             </div>
           </Link>
 
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>AEG Angel-Grinder 230</p>
               <img className='home--products--images' src="AEG-Angel-Grinder 230.webp" alt="AEG-Angel-Grinder" />
             </div>
           </Link>
 
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>DeWalt Angel-Grinder125</p>
               <img className='home--products--images' src="DeWalt-Angel-Grinder125.webp" alt="DeWalt-Angel-Grinder" />
@@ -62,21 +62,21 @@ export default function Home() {
         </div>
 
         <div className='home--power--drill--container'>
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Bosch600</p>
               <img className='home--products--images' src="Bosch600.jpg" alt="" />
             </div>
           </Link>
 
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Bosch1200</p>
               <img className='home--products--images' src="Bosch1200.jpg" alt="" />
             </div>
           </Link>
 
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Ryobi800</p>
               <img className='home--products--images' src="Ryobi800.webp" alt="" />
@@ -85,21 +85,21 @@ export default function Home() {
         </div>
 
         <div className='home--cordless--drill--container'>
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Bosch-cordless18</p>
               <img className='home--products--images' src="Bosch-cordless18.webp" alt="" />
             </div>
           </Link>
 
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>DeWalt-cordless20</p>
               <img className='home--products--images' src="DeWalt-cordless20.webp" alt="" />
             </div>
           </Link>
 
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Makita-cordless18 Pack</p>
               <img className='home--products--images' src="i_013c3c259c058f87174967811c3a56ea-w-800h-800f-1c-ffffffo-q-80.jpg" alt="" />
@@ -108,21 +108,21 @@ export default function Home() {
         </div>
 
         <div className='home--hand--tools--container'>
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Bosch-cordless18</p>
               <img className='home--products--images' src="screwdriver-set-stanley.jpg" alt="" />
             </div>
           </Link>
 
-          <Link to="/products">  
+          <Link className='home--product--link' to="/products">  
             <div>
               <p className='home--products--name'>DeWalt-cordless20</p>
               <img className='home--products--images' src="industrial-leather-hand-gloves.jpg" alt="" />
             </div>
           </Link>  
 
-          <Link to="/products">
+          <Link className='home--product--link' to="/products">
             <div>
               <p className='home--products--name'>Makita-cordless18 Pack</p>
               <img className='home--products--images' src="pliers-stanley.jpg" alt="" />

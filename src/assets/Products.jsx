@@ -233,8 +233,7 @@ export default function Products({ addToCart, openCartModal }) {
             <img className="the--products--images" src={product.imageUrl} alt={product.name} />
             <div className="products--info">
               <h3>{product.name}</h3>
-              <p>{product.price}$</p>
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
+              {/* <p>{product.price}$</p> */}
             </div>
           </div>
         ))}
