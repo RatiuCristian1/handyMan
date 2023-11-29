@@ -566,17 +566,25 @@ footer {
     flex-direction: column;
     gap: 120px;
     align-items: center;
-    border: 1px solid red;
   }
+
 
   .cart--item {
     display: flex;
     margin-bottom: 50px;
+    gap: 50px;
+    border: 1px solid #9c9b9b;
+    padding: 20px;
+    border-radius: 5px;
   }
 
   .cart--header {
     width: 300px;
     margin: 0;
+    font-size: 1rem;
+  }
+
+  .item--name {
     font-size: 1rem;
   }
 

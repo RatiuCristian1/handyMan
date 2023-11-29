@@ -72,3 +72,7 @@ export default function Products({ addToCart, openCartModal }) {
     </div>
   );
 }
+
+
+
+

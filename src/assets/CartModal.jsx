@@ -1,6 +1,7 @@
+// CartModal.js
 import React from "react";
 
-const CartModal = ({ cartItems, onClose }) => {
+const CartModal = ({ cartItems, onClose, onDeleteItem }) => {
   return (
     <div className="cart-modal">
       <div className="cart-modal-content">
@@ -11,15 +12,20 @@ const CartModal = ({ cartItems, onClose }) => {
         {cartItems.length === 0 ? (
           <p>No items in the cart</p>
         ) : (
-          cartItems.map((item) => (
-            <div>
-              <div key={item.id} className="cart--item">
-                <img className="cart--image" src={item.imageUrl} alt="" />
-                <p>{item.name}</p>
+          <div>
+            {cartItems.map((item, index) => (
+              <div key={index} className="cart--item--container">
+                <div className="cart--item">
+                  <img className="cart--image" src={item.imageUrl} alt="" />
+                  <p className="item--name">{item.name}</p>
+                </div>
+                <p>Quantity: {item.quantity}</p>
               </div>
-              <p>Quantity: {item.quantity}</p>
-            </div>
-          ))
+            ))}
+            <button className="delete--cart--button" onClick={onDeleteItem}>
+              Delete All Items
+            </button>
+          </div>
         )}
       </div>
     </div>
@@ -27,3 +33,4 @@ const CartModal = ({ cartItems, onClose }) => {
 };
 
 export default CartModal;
+
