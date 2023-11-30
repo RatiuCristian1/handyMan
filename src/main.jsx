@@ -131,12 +131,19 @@ const App = () => {
     }
   };
 
+
   const openCartModal = () => {
     setCartModalOpen(true);
   };
 
   const closeCartModal = () => {
     setCartModalOpen(false);
+  };
+
+  const onDeleteItem = (index) => {
+    const updatedCart = [...cartItems];
+    updatedCart.splice(index, 1); // Remove the item at the specified index
+    setCartItems(updatedCart);
   };
 
   return (
@@ -162,7 +169,7 @@ const App = () => {
         />
       )}
       {/* Cart Modal */}
-      {isCartModalOpen && <CartModal cartItems={cartItems} onClose={closeCartModal} />}
+      {isCartModalOpen && <CartModal cartItems={cartItems} onClose={closeCartModal} onDeleteItem={onDeleteItem} />}
     </BrowserRouter>
   );
 };

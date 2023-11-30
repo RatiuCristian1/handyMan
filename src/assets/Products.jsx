@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { getProducts } from "./api";
-import { Link } from 'react-router-dom';
 import ProductModal from "./ProductModal";
 
 export default function Products({ addToCart, openCartModal }) {
@@ -42,6 +41,7 @@ export default function Products({ addToCart, openCartModal }) {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+
 
   return (
     <div>
