@@ -1,4 +1,3 @@
-// // CartModal.js
 // import React from "react";
 
 // const CartModal = ({ cartItems, onClose, onDeleteItem }) => {
@@ -20,11 +19,11 @@
 //                   <p className="item--name">{item.name}</p>
 //                 </div>
 //                 <p>Quantity: {item.quantity}</p>
+//                 <button className="delete--cart--button" onClick={() => onDeleteItem(index)}>
+//                   Delete Item
+//                 </button>
 //               </div>
 //             ))}
-//             <button className="delete--cart--button" onClick={() => onDeleteItem(index)}>
-//               Delete All Items
-//             </button>
 //           </div>
 //         )}
 //       </div>
@@ -34,9 +33,13 @@
 
 // export default CartModal;
 
+
 import React from "react";
 
 const CartModal = ({ cartItems, onClose, onDeleteItem }) => {
+  // Calculate total price
+  const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
   return (
     <div className="cart-modal">
       <div className="cart-modal-content">
@@ -55,11 +58,15 @@ const CartModal = ({ cartItems, onClose, onDeleteItem }) => {
                   <p className="item--name">{item.name}</p>
                 </div>
                 <p>Quantity: {item.quantity}</p>
+                <p>Item Price: ${item.price}</p>
                 <button className="delete--cart--button" onClick={() => onDeleteItem(index)}>
                   Delete Item
                 </button>
               </div>
             ))}
+            <div className="total-price">
+              <p>Total Price: ${totalPrice.toFixed(2)}</p>
+            </div>
           </div>
         )}
       </div>

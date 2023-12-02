@@ -34,6 +34,11 @@ export default function Products({ addToCart, openCartModal }) {
     setSelectedProduct(null);
   };
 
+  const onAddToCart = (product) => {
+    addToCart(product);
+    closeModal(); // Close the modal after adding to cart
+  };
+
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
@@ -67,7 +72,7 @@ export default function Products({ addToCart, openCartModal }) {
         ))}
       </div>
       {selectedProduct && (
-        <ProductModal product={selectedProduct} onClose={closeModal} onAddToCart={addToCart} />
+        <ProductModal product={selectedProduct} onClose={closeModal} onAddToCart={onAddToCart} />
       )}
     </div>
   );
