@@ -137,7 +137,7 @@
 .home--products--images {
   max-width: 213px;
   flex: 1;
-  box-shadow: 0 0 10px rgb(163, 153, 153);
+  box-shadow: 0 0 5px rgb(77, 75, 75);
   border-radius: 5px;
   margin: 0.5em 0 1em 0;
 }
@@ -166,6 +166,12 @@
   font-size: 1rem;
 }
 
+.home--product--link {
+  text-decoration: line;
+  text-decoration-color: #333;
+
+}
+
 .backgroung--home--banner {
   background-image: url('bannerBack1.jpg');
   background-position: center;
@@ -176,7 +182,7 @@
 
 .home--banner {
   position: absolute;
-  top: 912px;
+  top: 895px;
   left: 400px;
 }
 
@@ -315,22 +321,26 @@
 .products--list {
   display: flex;
   width: 63%;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #8a8a8a;
   flex-flow: wrap;
   margin: 20px auto;
   gap: 1em;
+  border-radius: 5px;
 
 }
 
 .products--tile {
   flex: 1;
-  border: 1px solid #c5c4c4;
-  margin: 0.5em;
+  box-shadow: 0 0 5px #333;
+  margin: 1em;
+  border-radius: 3px;
 }
 
 .the--products--images {
   width: 200px;
   height: 200px;
+  cursor: pointer;
+
 }
 
 .products--info {
@@ -351,7 +361,37 @@
   width: 63%;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+}
 
+.pagination--button {
+  padding: 15px 20px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 5px #333;
+  margin-bottom: 0.5rem;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.counter--button {
+  padding: 4px 13px;
+}
+
+.add--to--cart--button {
+  padding: 8px 18px;
+}
 
 
 /* Add styles to your footer as needed */
@@ -659,7 +699,7 @@ footer {
     font-family: 'Shantell Sans', cursive;
     cursor: pointer;
     color: #5a5a5a;
-    box-shadow: 4px 0px 0px #333;
+    box-shadow: 0 0 5px #333;
   }
 
 }
