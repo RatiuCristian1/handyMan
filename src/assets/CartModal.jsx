@@ -51,19 +51,28 @@ const CartModal = ({ cartItems, onClose, onDeleteItem }) => {
           <p>No items in the cart</p>
         ) : (
           <div>
-            {cartItems.map((item, index) => (
-              <div key={index} className="cart--item--container">
-                <div className="cart--item">
-                  <img className="cart--image" src={item.imageUrl} alt="" />
-                  <p className="item--name">{item.name}</p>
+            <div className="cart--item--container">
+              {cartItems.map((item, index) => (
+                <div key={index}>
+                  <div className="cart--item">
+                    <img className="cart--image" src={item.imageUrl} alt="" />
+                    <p className="item--name">{item.name}</p>
+                  </div>
+                  <p>Quantity: {item.quantity}</p>
+                  <p className="cart--price">Item Price: ${item.price}</p>
+                  {/* <button className="delete--cart--button" onClick={() => onDeleteItem(index)}>
+                    Delete Item
+                  </button> */}
+                  <button className="button-82-pushable" onClick={() => onDeleteItem(index)} role="button">
+                    <span className="button-82-shadow"></span>
+                    <span className="button-82-edge"></span>
+                    <span className="button-82-front text">
+                      Delete Item
+                    </span>
+                  </button>
                 </div>
-                <p>Quantity: {item.quantity}</p>
-                <p>Item Price: ${item.price}</p>
-                <button className="delete--cart--button" onClick={() => onDeleteItem(index)}>
-                  Delete Item
-                </button>
-              </div>
-            ))}
+              ))}
+            </div>
             <div className="total-price">
               <p>Total Price: ${totalPrice.toFixed(2)}</p>
             </div>

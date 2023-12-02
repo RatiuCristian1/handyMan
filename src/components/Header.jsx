@@ -15,7 +15,7 @@ export default function Header({ openCartModal, cartItemsCount }) {
           <Link className="header--home" to="/products">
             Products
           </Link>
-          <button className="cart-icon" onClick={openCartModal}>
+          <button className="cart--icon" onClick={openCartModal}>
             🛒 {cartItemsCount > 0 && <span className="cart-count">{cartItemsCount}</span>}
           </button>
         </nav>
