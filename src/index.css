@@ -21,7 +21,7 @@
 }
 
 .header--container {
-  padding: 0.5em;
+  padding: 0.75em;
   background-color: brown;
   position: fixed;
   top: 0;
@@ -42,12 +42,21 @@
   font-size: 1.2rem;
 }
 
+.header--home:hover {
+  font-size: 1.35rem;
+  text-shadow: 0 0 5px #fff;
+}
+
 .header--logo {
   font-size: 2em;
   margin-top: 5px;
   margin-right: 1em;
 }
 
+.cart--icon {
+  cursor: pointer;
+  margin-right: 20px;
+}
 
 .container {
   display: flex;
@@ -85,7 +94,7 @@
 }
 
 .first-text {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   position: relative;
   top: -100px;
   left: 20px;
@@ -116,6 +125,12 @@
 .right--arrow {
   font-size: 4rem;
   color: rgba(239, 244, 205, 0.5);
+  cursor: pointer;
+}
+
+.left--arrow:hover,
+.right--arrow:hover {
+  color: #fff;
 }
 
 .layout-container {
@@ -139,7 +154,7 @@
 }
 
 .home--products--images {
-  max-width: 213px;
+  width: 213px;
   flex: 1;
   box-shadow: 0 0 5px rgb(77, 75, 75);
   border-radius: 5px;
@@ -186,7 +201,7 @@
 
 .home--banner {
   position: absolute;
-  top: 895px;
+  top: 850px;
   left: 400px;
 }
 
@@ -333,10 +348,6 @@
   width: 200px;
 }
 
-.cart--icon {
-  cursor: pointer;
-}
-
 
 .products--list {
   display: flex;
@@ -395,6 +406,7 @@
   border: none;
   box-shadow: 0 0 5px #333;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 .counter {
@@ -630,7 +642,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
- 
 
   }
 
@@ -647,9 +658,13 @@ footer {
   }
 
   .home--products--images {
-    width: 250px;
+    width: 100%;
   }
 
+  .home--product--link {
+    width: 90%;
+  }
+  
   .home--banner,
   .wrench--banner {
     display: none;
@@ -786,6 +801,11 @@ footer {
     position: absolute;
     top: 40px;
     left: 0;
+  }
+
+  .cart--icon {
+    cursor: pointer;
+    margin-right: 10px;
   }
 
   .item--name {
