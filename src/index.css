@@ -796,25 +796,27 @@ footer {
   .cart--item--container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 400px;
+    border: 1px solid blue;
+    width: 250px;
+    height: 50vh;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
   }
 
   .cart-modal {
-    width: 100%;
-    height: 50vh;
+    /* width: 100%; */
     background-color: transparent;
   }
 
   .cart-modal-content {
-    width: 100%;
-    height: 80vh;
+    width: 90%;
+    height: 80vh; 
     margin-top: 100px;
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 20px;
     align-items: center;
+    border: 1px solid red;
   }
 
   .cart--image {
@@ -825,7 +827,7 @@ footer {
 
   .cart--item {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 10px;
     gap: 50px;
     border: 1px solid #9c9b9b;
@@ -837,7 +839,7 @@ footer {
     width: 300px;
     margin: 0;
     font-size: 1rem;
-    position: absolute;
+    /* position: absolute; */
     top: 40px;
     left: 0;
   }
@@ -858,11 +860,7 @@ footer {
     background-color: rgb(248, 196, 196);
     color: #333;
     font-size: 1.5rem;
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    left: 310px;
-    bottom: 0px;
+    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
