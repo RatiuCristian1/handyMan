@@ -53,6 +53,7 @@ export default function Products({ addToCart, openCartModal }) {
       <div className="products--banner--container">
         <img className="products--banner--image" src="banner3.png" alt="" />
       </div>
+      <div className="br--line"></div>
       <div className="products--list">
         {currentProducts.map((product) => (
           <div key={product.id} className="products--tile" onClick={() => openModal(product)}>

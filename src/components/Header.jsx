@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 export default function Header({ openCartModal, cartItemsCount }) {
   return (
-    <div className="header--container">
-      <header>
+    <div>
+      <header className="header--container">
         <Link className="site--logo" to="/">
-          <div className="site--logo--image">{/* Your site logo here */}</div>
+          <div className="site--logo--container">
+            <img className="site--logo--image" src="HandyManLogo.png" alt="Logo" />
+          </div>
         </Link>
         <nav className="navigation--el">
           <Link className="header--home" to="/">

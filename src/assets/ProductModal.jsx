@@ -83,7 +83,7 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
           &times;
         </span>
         <img className="modal--image" src={product.imageUrl} alt={product.name} />
-        <div className="modal--info">
+        <div className="modal--info">   
           <h2 className="modal--product--name">{product.name}</h2>
           <p>power: {product.power}</p>
           <p>weight: {product.weight}</p>
@@ -98,7 +98,7 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
             <button className='counter--button' onClick={handleIncrement}>+</button>
           </div>
 
-          <div className="total-price">
+          <div className="total-price-modal">
             Total: ${modalTotalPrice}
           </div>
 
