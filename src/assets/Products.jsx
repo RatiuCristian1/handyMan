@@ -69,21 +69,25 @@ export default function Products({ addToCart, openCartModal }) {
         <img className="products--banner--image" src="banner3.png" alt="" />
       </div>
       <div className="product--filter">
-        <label className="filter--label" htmlFor="productType">Filter by Product Type: </label>
-        <select className="filter--select" id="productType" value={productTypeFilter} onChange={handleFilterChange}>
-          <option className="filter--option" value="">All</option>
-          <option className="filter--option" value="angel-grinder">Angel Grinder</option>
-          <option className="filter--option" value="hand-tool">Hand Tool</option>
-          <option className="filter--option" value="hand-drill">Hand Drill</option>
-          <option className="filter--option" value="cordless-drill">Cordless Drill</option>
-        </select>
-        <label className="filter--label" htmlFor="productBrand">Filter by Product Brand: </label>
-        <select className="filter--select" id="productBrand" value={productBrandFilter} onChange={handleBrandFilterChange}>
-          <option className="filter--option" value="">All</option>
-          <option className="filter--option" value="Bosch">Bosch</option>
-          <option className="filter--option" value="Makita">Makita</option>
-          <option className="filter--option" value="DeWalt">DeWalt</option>
-        </select>
+        <div className="filter--type--container">
+          <label className="filter--label" htmlFor="productType">Filter by Product Type: </label>
+          <select className="filter--select" id="productType" value={productTypeFilter} onChange={handleFilterChange}>
+            <option className="filter--option" value="">All</option>
+            <option className="filter--option" value="angel-grinder">Angel Grinder</option>
+            <option className="filter--option" value="hand-tool">Hand Tool</option>
+            <option className="filter--option" value="hand-drill">Hand Drill</option>
+            <option className="filter--option" value="cordless-drill">Cordless Drill</option>
+          </select>
+        </div>
+        <div className="filter--brand--container">
+          <label className="filter--label" htmlFor="productBrand">Filter by Product Brand: </label>
+          <select className="filter--select" id="productBrand" value={productBrandFilter} onChange={handleBrandFilterChange}>
+            <option className="filter--option" value="">All</option>
+            <option className="filter--option" value="Bosch">Bosch</option>
+            <option className="filter--option" value="Makita">Makita</option>
+            <option className="filter--option" value="DeWalt">DeWalt</option>
+          </select>
+        </div>
       </div>
       <div className="br--line"></div>
       <div className="products--list">

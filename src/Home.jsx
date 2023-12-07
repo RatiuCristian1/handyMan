@@ -35,8 +35,10 @@ export default function Home() {
       </div>
 
       <div className='backgroung--home--banner'></div>
+      <h1 className="product--title">Check out the Products</h1>
       
       <div className='home--products--container'>
+
 
         <div className='home--angel--grinder--container'>
           <Link className='home--product--link' to="/products">

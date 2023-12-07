@@ -211,7 +211,7 @@
 
 .home--banner {
   position: absolute;
-  top: 850px;
+  top: 908px;
   left: 400px;
 }
 
@@ -403,6 +403,12 @@
   width: 63%;
 }
 
+.product--title {
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .br--line {
   background-color: #706f6f;
   width: 100%;
@@ -565,12 +571,16 @@
 
 .product--filter {
   display: flex;
-  flex-direction: column;
-  width: 200px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
   margin-left: 351px;
   margin-top: 50px;
-
+  gap: 30px;
 }
+
+
 
 .filter--label { 
   color: #333;
@@ -580,8 +590,13 @@
 .filter--select {
   padding: 6px 12px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
+
+.social--icon {
+  width: 50px;
+}
 
 
 
@@ -604,13 +619,15 @@ footer {
 .footer--container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   background-color: red;
-  height: 200px; 
+  height: 240px; 
+  padding: 50px;
 }
 
 .footer--social {
   color: #333;
+  margin: 15px;
 }
 
 .footer--images {
