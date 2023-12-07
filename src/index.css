@@ -563,6 +563,26 @@
 }
 
 
+.product--filter {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-left: 351px;
+  margin-top: 50px;
+
+}
+
+.filter--label { 
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.filter--select {
+  padding: 6px 12px;
+  margin-bottom: 10px;
+}
+
+
 
 
 

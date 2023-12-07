@@ -21,17 +21,23 @@ const db = getFirestore(app)
 const productsCollectionRef = collection(db, "products")
 const storage = getStorage(app);
 
-export async function getProducts(typeFilter) {
+export async function getProducts(typeFilter, brandFilter) {
   try {
-    let productsQuery;
+    let productsQuery = productsCollectionRef;
 
     if (typeFilter) {
       // If typeFilter is provided, filter by type
       productsQuery = query(productsCollectionRef, where("type", "==", typeFilter));
-    } else {
-      // If no typeFilter, fetch all products
-      productsQuery = productsCollectionRef;
     }
+    
+    if (brandFilter) {
+      productsQuery = query(productsQuery, where("brand", "==", brandFilter));
+    }
+    
+    // else {
+    //   // If no typeFilter, fetch all products
+    //   productsQuery = productsCollectionRef;
+    // }
 
     const snapshot = await getDocs(productsQuery);
     const products = snapshot.docs.map(async (doc) => {
