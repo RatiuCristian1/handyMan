@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, collection, getDocs, getDoc } from "firebase/firestore/lite";
+import { getFirestore, doc, collection, query, where, getDocs, getDoc } from "firebase/firestore/lite";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -21,53 +21,43 @@ const db = getFirestore(app)
 const productsCollectionRef = collection(db, "products")
 const storage = getStorage(app);
 
-export async function getProducts() {
+export async function getProducts(typeFilter) {
   try {
-    const snapshot = await getDocs(productsCollectionRef);
+    let productsQuery;
+
+    if (typeFilter) {
+      // If typeFilter is provided, filter by type
+      productsQuery = query(productsCollectionRef, where("type", "==", typeFilter));
+    } else {
+      // If no typeFilter, fetch all products
+      productsQuery = productsCollectionRef;
+    }
+
+    const snapshot = await getDocs(productsQuery);
     const products = snapshot.docs.map(async (doc) => {
       const data = doc.data();
-      const imageUrl = data.imagePath; // Use the GCS URL
+      const imageUrl = data.imagePath;
 
-      // Convert GCS URL to publicly accessible URL
       const imageRef = ref(storage, imageUrl);
       const publicUrl = await getDownloadURL(imageRef);
 
       return {
         ...data,
         id: doc.id,
-        imageUrl: publicUrl, // Updated imageUrl with publicly accessible URL
+        imageUrl: publicUrl,
       };
     });
 
     const resolvedProducts = await Promise.all(products);
-    console.log("Products Data:", resolvedProducts);
+    // console.log("Products Data:", resolvedProducts);
 
     return resolvedProducts;
   } catch (error) {
-    console.error("Error fetching products:", error);
+    // console.error("Error fetching products:", error);
     throw error;
   }
 }
 
-// export async function getProductById(id) {
-//   const docRef = doc(db, "products", id)
-//   const snapshot = await getDoc(docRef)
-//   const caravanData = snapshot.data();
-  
-//   // Check if there's an imagePath property
-//   if (caravanData.imagePath) {
-//       const imageRef = ref(storage, caravanData.imagePath);
-
-//       try {
-//           const imageUrl = await getDownloadURL(imageRef);
-//           return { ...caravanData, id: snapshot.id, imageUrl };
-//       } catch (error) {
-//           console.error('Error fetching image URL:', error);
-//       }
-//   }
-
-//   return { ...caravanData, id: snapshot.id };
-// }
 
 export async function getProductById(id) {
   try {
