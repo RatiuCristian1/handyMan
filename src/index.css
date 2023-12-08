@@ -317,10 +317,10 @@
 /* Add this to your existing CSS or create a new CSS file */
 .cart-modal {
   position: fixed;
-  top: 160px;
+  top: 100px;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -831,29 +831,34 @@ footer {
   }
 
   .cart--item--container {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 330px;
+    width: 300px; /* Set a max height for the container */
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
-    width: 250px;
-    height: 50vh;
-    flex-wrap: wrap;
-    /* justify-content: flex-end; */
+    border: 1px solid #333;
+    justify-content: center;
+    align-items: center;
   }
 
   .cart-modal {
-    /* width: 100%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: transparent;
   }
 
   .cart-modal-content {
-    width: 90%;
-    height: 80vh; 
+    width: 100%;
+    height: 850px;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
     align-items: center;
     border: 1px solid red;
+    overflow-y: hidden;
   }
 
   .cart--image {
@@ -864,19 +869,25 @@ footer {
 
   .cart--item {
     display: flex;
-    /* width: 100%; */
     margin-bottom: 10px;
     gap: 50px;
-    border: 1px solid #9c9b9b;
+    border: 1px solid #af0303;
     padding: 20px;
     border-radius: 5px;
+  }
+
+  .cart--item:first-child {
+    margin-top: 20px; /* Add margin above the first product */
+  }
+  
+  .cart--item:last-child {
+    margin-bottom: 20px; /* Add margin below the last product */
   }
 
   .cart--header {
     width: 300px;
     margin: 0;
     font-size: 1rem;
-    /* position: absolute; */
     top: 40px;
     left: 0;
   }
@@ -907,6 +918,26 @@ footer {
     background-color: rgb(247, 111, 111);
   }
 
+
+  .product--filter {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .filter--label {
+    font-size: 0.75rem;
+    margin-left: 5px;
+  }
+
+  .filter--select {
+    margin-top: 5px;
+  }
+
+  .filter--type--container,
+  .filter--brand--container {
+    width: 150px;
+  }
 
 
   footer {
