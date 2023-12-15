@@ -3,15 +3,15 @@ import React from "react";
 export default function Footer() {
     return (
         <div className="footer--container">
-            <div>
-            <h1 className="footer--text">Footer</h1>
-            <h3>www.handyman.example</h3>
+            <div className="footer--contact">
+                <h1 className="footer--text">Contact</h1>
+                <h3>www.handyman.com</h3>
             </div>
             <div className="footer--images--container">
                 <h3>Delivery Partners</h3>
                 <img className="footer--images" src="dhl1.png" alt="" />
                 <img className="footer--images" src="hermes.webp" alt="" />
-                <img className="footer--images" src="ups.png" alt="" />
+                <img className="footer--images image3" src="ups.png" alt="" />
             </div>
             <div>
                 <h3 className="footer--social">Social media</h3>
